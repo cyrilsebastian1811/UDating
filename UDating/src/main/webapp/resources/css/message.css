@@ -1,0 +1,104 @@
+@charset "UTF-8";
+	body,html{
+		background-color: pink;
+		height: 100%;
+	}
+	a{
+		display: block;
+		align-self: center;
+		justify-self: center;
+	}
+	.toolbar{
+		background-color: gray;
+		height: 80px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.toolbar span{
+		font-size: 2em;
+	}
+	.container{
+		width: 90%;
+		height: 80%;
+		margin: 20px auto;
+ 		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+	#profiles{
+		overflow: scroll;
+		height: 100%;	
+	}
+	.user:hover{
+		background-color: cyan;
+	}
+	.user{
+		font-size: 1em;
+		border-bottom: 1px solid white;
+		cursor: pointer;
+	}
+	img{
+		width: 3em;
+		border-radius: 50%;
+		height: 3em;
+	}
+	#chatbox{
+		padding: 10px;
+		grid-column: 1/3;
+		grid-row: 1/2;
+		overflow: scroll;
+		background-color: white;
+	}
+	#messages{
+		height: 100%;
+		width: 100%;
+ 		display: grid;
+		grid-template-columns: 5fr 1fr;
+		grid-template-rows: 5fr 1fr;
+		background-color: gray;
+		border-radius: 15px;
+	}
+	textarea{
+		display: block;
+		grid-column: 1/2;
+		grid-row: 2/3; 
+		margin: 10px;
+		resize: none;
+		padding: 10px;
+	}
+	button {
+		border-radius: 5px;
+		display: block;
+		grid-column: 2/3;
+		grid-row: 2/3; 
+		justify-self: center;
+		align-self: center;
+		font-size: 2em;
+		background-color: green;
+	}
+	.from{
+		background-color: green;
+		display: block;
+		float: right;
+		font-size: 2em;
+		clear: both;
+		padding: 5px;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
+	.to{
+		background-color: gray;
+		display: block;
+		float: left;
+		font-size: 2em;
+		clear: both;
+		padding: 5px;
+		border-radius: 5px;
+		margin-bottom: 5px;
+	}
+	.details{
+		display: inline-block;
+		margin: 0;
+		transform: translateY(-100%);
+	}
+	

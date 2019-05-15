@@ -1,0 +1,46 @@
+@charset "UTF-8";
+	body{
+		background-color: pink;
+	}
+	a{
+		display: block;
+		align-self: center;
+		justify-self: center;
+	}
+	.toolbar{
+		background-color: gray;
+		height: 80px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+	.toolbar span{
+		font-size: 2em;
+	}
+	.container{
+		width: 100%;
+		margin: 20px auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 10px;
+	}
+	.user{
+		/* position: relative; */
+		height: 300px;
+		text-align: center;
+		overflow: scroll;
+		
+	}
+	p{
+		margin: 10px;
+	}
+	.image{
+		width: 100%;
+		height: 200px;
+		background-color: gray;
+	}
+	button{
+		font-size: 1.2em;
+	}
+	span:first-child{
+		color:yellow;
+	}

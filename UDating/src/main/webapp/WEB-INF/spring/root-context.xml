@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<bean id = "multipartResolver" class = "org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+	<bean id="loginDao" class="com.neu.edu.dao.LoginDao"/>
+	<bean id="userDao" class="com.neu.edu.dao.UserDao"/>
+	<bean id="locationDao" class="com.neu.edu.dao.LocationDao"/>
+	<bean id="matchedDao" class="com.neu.edu.dao.MatchedDao"/>
+	<bean id="messageDao" class="com.neu.edu.dao.MessageDao"/>
+	<bean id="adminDao" class="com.neu.edu.dao.AdminDao"/>
+	
+	<bean id = "security" class = "org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	
+	<bean id = "loginValidation" class = "com.neu.validators.LoginValidator">
+		<property name="loginDao" ref="loginDao"/>
+	</bean>
+	
+	<bean id = "userValidation" class = "com.neu.validators.UserRegistrationValidator">
+		<property name="loginDao" ref="loginDao"/>
+	</bean>
+	
+	<bean id = "webSocketConfig" class = "com.neu.sockets.WebSocketConfig" />
+</beans>
